@@ -1,1 +1,9 @@
-<p>todo-item works!</p>
+
+    <li appHighlighCompletedTodo [isCompleted]="todo().completed" class="todos__item">
+      <input
+      type="checkbox"
+      id="todo-{{todo().id}}"
+      [checked]="todo().completed"
+      (change)="this.todoClicked()"/>
+      <label for="todo-{{todo().id}}">{{ todo().title }} </label>
+    </li>
