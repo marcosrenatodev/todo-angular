@@ -3,12 +3,10 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "first-ng-app": {
+    "todo-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "inlineTemplate": true,
-          "inlineStyle": true,
           "style": "scss"
         }
       },
@@ -19,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/first-ng-app",
+            "outputPath": "dist/todo-angular",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -66,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "first-ng-app:build:production"
+              "buildTarget": "todo-angular:build:production"
             },
             "development": {
-              "buildTarget": "first-ng-app:build:development"
+              "buildTarget": "todo-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -100,5 +98,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
